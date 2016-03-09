@@ -1,0 +1,9 @@
+<div class="container">
+	<h2>Latest hooks</h2>
+	<hr />
+	<% @webhooks.each do |webhook| -%>
+	    <div class="well">
+	        <%= webhook.payload %> on the post <%= webhook.created_at.strftime("%H %d/%m/%y") %>
+	    </div>
+	<% end -%>
+</div>
