@@ -1,8 +1,6 @@
 Rails.application.routes.draw do
-  root 'webhook#all'
+  root 'webhook#list'
 
-  get 'webhook/get'
-  get 'webhook/all'
-
-  post 'webhook/post'
+  get 'webhook', to: 'webhook#get'
+  post 'webhook', to: 'webhook#post'
 end

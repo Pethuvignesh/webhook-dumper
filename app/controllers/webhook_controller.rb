@@ -7,7 +7,7 @@ class WebhookController < ApplicationController
     save_and_print_params
   end
 
-  def all
+  def list
     @webhooks = Webhook.order(created_at: 'DESC')
   end
 
